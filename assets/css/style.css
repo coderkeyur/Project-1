@@ -5,3 +5,8 @@
 #nameInput {
     max-width: 20%;
 }
+
+.placeholder-gray {
+    color: gray;
+    font-style: italic;
+}
