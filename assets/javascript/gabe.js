@@ -13,7 +13,7 @@ $(document).ready(function () {
                 event.preventDefault();
                 response($("#grub").val().trim());
 
-                $("#grub").append("#foodOption").val("");
+                $("#grub").append(".zomatoResults").val("");
                 console.log(response)
             })
     });
