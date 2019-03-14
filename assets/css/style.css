@@ -6,7 +6,8 @@
     max-width: 20%;
 }
 
-.placeholder-gray {
-    color: gray;
-    font-style: italic;
+.masthead {
+    width: 100%;
+    text-align: center;
 }
+
