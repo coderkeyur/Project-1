@@ -11,55 +11,69 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bungee|Fredoka+One|Open+Sans" rel="stylesheet">
     <!--CSS style-->
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 
 <body>
+
+    <!--THIS IS MY COMMENT RIGHT HERE!!!-->
+    <!-- testing the push and pull -->
+    <!--keyur-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Perfect Day</h1>
+            <p class="lead">Plan your day, the Perfect Day way!</p>
+        </div>
+    </div>
     <div class="container">
         <form>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Tell us your name!</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label for="nameInput">Tell us your name!</label>
+                <input type="name" class="form-control" id="nameInput" placeholder="Your Name">
             </div>
+            <!-- Food options drop-downs -->
             <div class="row">
                 <div class="col-lg-3">
-                    <label for="exampleFormControlSelect1">First Choice:</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <label for="firstFoodOption">First Choice:</label>
+                    <select class="form-control" id="firstFoodOption">
+                        <option class="placeholder-gray" value="" hidden>--Pick a cuisine!--</option>
+                        <option value="0">Chinese</option>
+                        <option value="1">Indian</option>
+                        <option value="2">Mexican</option>
+                        <option value="3">Italian</option>
+                        <option value="4">Greek</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
-                    <label for="exampleFormControlSelect1">Second Choice:</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <label for="secondFoodOption">Second Choice:</label>
+                    <select class="form-control" id="secondFoodOption">
+                        <option class="placeholder-gray" value="" hidden>--Pick a cuisine!--</option>
+                        <option value="0">Chinese</option>
+                        <option value="1">Indian</option>
+                        <option value="2">Mexican</option>
+                        <option value="3">Italian</option>
+                        <option value="4">Greek</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
-                    <label for="exampleFormControlSelect1">Third Choice:</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <label for="thirdFoodOption">Third Choice:</label>
+                    <select class="form-control" id="thirdFoodOption">
+                        <option class="placeholder-gray" value="" hidden>--Pick a cuisine!--</option>
+                        <option value="0">Chinese</option>
+                        <option value="1">Indian</option>
+                        <option value="2">Mexican</option>
+                        <option value="3">Italian</option>
+                        <option value="4">Greek</option>
                     </select>
                 </div>
             </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="locationInput">Where are you?</label>
-                        <input type="text" class="form-control" id="locationInput"
-                            placeholder="Address, City, State, ZIP">
-                    </div>
-                </div>
+            <br>
+            <div class="form-group">
+                <label for="locationInput">Where are you?</label>
+                <input type="text" class="form-control" id="locationInput" placeholder="ZIP code">
+            </div>
         </form>
     </div>
 

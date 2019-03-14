@@ -1,0 +1,12 @@
+#locationInput {
+    max-width: 10%;
+}
+
+#nameInput {
+    max-width: 20%;
+}
+
+.placeholder-gray {
+    color: gray;
+    font-style: italic;
+}
