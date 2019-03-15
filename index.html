@@ -13,11 +13,10 @@
     <!--CSS style-->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
 </head>
 
-<body>
-
+<body background="assets/images/background_image_1.jpg">
     <!--THIS IS MY COMMENT RIGHT HERE!!!-->
     <!-- testing the push and pull -->
     <!--keyur-->
@@ -36,8 +35,8 @@
             <!-- Food options drop-downs -->
             <div class="row">
                 <div class="col-lg-3">
-                    <label for="firstFoodOption">First Choice:</label>
-                    <select class="form-control" id="firstFoodOption">
+                    <label for="foodOption">What would you like to eat?</label>
+                    <select class="form-control" id="foodOption">
                         <option class="placeholder-gray" value="" hidden>--Pick a cuisine!--</option>
                         <option value="0">Chinese</option>
                         <option value="1">Indian</option>
@@ -52,10 +51,19 @@
                 <label for="locationInput">Where are you?</label>
                 <input type="text" class="form-control" id="locationInput" placeholder="ZIP code">
             </div>
+            <br>
+            <div class="form-group">
+                <label for="needARide">Do you need transportation?</label>
+                <select class="form-control" id="needARide">
+                    <option class="placeholder-gray" value="" hidden></option>
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+            </div>
             <div class="zomato-result">
                 Test
             </div>
-                
+
             <div class="nps-result">
                 Test
             </div>
