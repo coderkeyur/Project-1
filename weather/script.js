@@ -1,3 +1,5 @@
+
+
 //url for the weather API call
 var weatherBaseURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
 var weatherQueryParams = '&units=imperial&APPID=9af9987d0f66079a5baa5b00f7f58162';
@@ -7,9 +9,10 @@ var weatherQueryParams = '&units=imperial&APPID=9af9987d0f66079a5baa5b00f7f58162
 function createHTML(cityName, tempValue){
 	var bgClass;
 	
+
 	var htmlString =	'<div class="setBorder ' + bgClass + '">' +
-											'<div class="weatherCity">' + cityName + '</div>' +
-											'<div class="weatherData">' + tempValue + '</div>' +
+						'<div class="weatherCity">' + cityName + '</div>' +
+					    '<div class="weatherData">' + tempValue + '</div>' +
 										'</div>';
 	$('#weatherResults').prepend(htmlString);
 }
@@ -29,7 +32,7 @@ var searchWeather = function(city){
 		},
 		success: function(data){
 			console.log("WooHoo!");
-			//console to see the returned data
+			//browser console to see the returned data
 			console.log(data);
 			//make sure the success response is ok
 			if (data.cod === '404'){
@@ -49,7 +52,7 @@ var searchWeather = function(city){
 	});
 };
 
-//Code to be executed once the page has fully loaded
+//executed once the page has fully loaded
 $(document).ready(function(){
 	console.log("LOADED!!!!");
 
@@ -65,12 +68,12 @@ $(document).ready(function(){
 	});
 
 	//What if someone just wants to click "ENTER"???
-	//Use jQuery to assign a (callback) function to occur when enter is pressed 
+	//jQuery to assign a (callback) function to occur when enter is pressed 
 	//This will ONLY work when the '#query' input box is active
 	$('#query').on('keypress', function(e){
 		//If enter key is pressed
 		if (e.which == 13){
-			//Use jQuery's trigger() function to execute a click event on the '#search' element
+			//jQuery's trigger() function to execute a click event on the '#search' element
 			$("#search").trigger('click');
 		}
 	});
