@@ -9,13 +9,16 @@ $(document).ready(function () {
             xhr.setRequestHeader('Accept', 'application/json');
             xhr.setRequestHeader('user-key', 'c81fcbb8bdb56196b1c05bb81e9c85d6');
         }
-            .then(function (response) {
-                event.preventDefault();
-                response($("#grub").val().trim());
+    }).then(function (data) {
+        console.log(data);
+        
 
-                $("#grub").append(".zomatoResults").val("");
-                console.log(response)
-            })
+            for (var x=0; x<data.categories.length; x++) {
+                var i = data.categories[x];
+                debugger;
+                var zomatoData = "<option value=" + i.categories.id + ">" + i.categories.name + "</option>";
+                $(zomatoData).appendTo('.zomato-result');
+            }
+        });
     });
-});
 
