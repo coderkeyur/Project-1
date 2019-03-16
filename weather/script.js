@@ -10,10 +10,7 @@ function createHTML(cityName, tempValue){
 	var bgClass;
 	
 
-	var htmlString =	'<div class="setBorder ' + bgClass + '">' +
-						'<div class="weatherCity">' + cityName + '</div>' +
-					    '<div class="weatherData">' + tempValue + '</div>' +
-										'</div>';
+	var htmlString =	'<div class="setBorder ' + bgClass + '">' + '<div class="weatherCity">' + cityName + '</div>' + '<div class="weatherData">' + tempValue + '</div>' + '</div>';
 	$('#weatherResults').prepend(htmlString);
 }
 
@@ -26,9 +23,9 @@ var searchWeather = function(city){
 		type: 'GET',
 		dataType: 'json',
 		error: function(data){
-			console.log("We got problems");
+			console.log("We got problems now");
 			console.log(data.status);
-			alert("Oh no. Something went wrong...");
+			// alert("Oh no. Something went wrong...");
 		},
 		success: function(data){
 			console.log("WooHoo!");
@@ -36,7 +33,7 @@ var searchWeather = function(city){
 			console.log(data);
 			//make sure the success response is ok
 			if (data.cod === '404'){
-				alert("Oh no. Something went wrong. Try another city");
+				// alert("Oh no. Something went wrong. Try another city");
 				//adding a return will end the success function
 				return;
 			}
