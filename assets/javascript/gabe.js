@@ -15,13 +15,14 @@ $.ajax({
     method: "get"
 }).then(function(response){
     console.log(response)
+debugger;
 
     for (var x=0; x<movies.length; x++) {
         var i = movies[x];
         var movieData = "<option value=" + i.movies + "</option>";
         $(movieData).appendTo('#movieChoices');
-   console.log("should show list of movies: " + movieData); 
     }
+    console.log("should show list of movies: " + movieData); 
 });
 
 
