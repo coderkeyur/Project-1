@@ -20,6 +20,7 @@
 .ui.form .field>label {
     color: white;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 1.15em;
 }
 
 .ui.sizer.vertical.segment {
@@ -37,7 +38,7 @@ input , select {
 
 .main-content-area {
     max-width: 95%;
-    height: 95%;
+    height: 75%;
     margin: auto;
     margin-bottom: 5%;
     background: url("../images/background_image_1.jpg") left no-repeat, url("../images/background_image_2.jpg") right no-repeat, url("../images/background_image_3.jpg") center no-repeat;
