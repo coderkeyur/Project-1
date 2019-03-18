@@ -103,8 +103,16 @@
                     </div>
                     <div class="ui container">
                         <div class="field">
-                            <label>What is your ZIP code?</label>
-                            <input type="text" placeholder="ZIP">
+                            <label for="zipInput">What is your ZIP code?</label>
+                            <input id="zipInput" type="text" placeholder="ZIP">
+                        </div>
+                    </div>
+                    <div class="ui container">
+                        <div class="field">
+                            <label for="movieChoices">What are you in the mood to watch?</label>
+                            <select class="form-control" id="movieChoices">
+                                <option class="placeholder-gray" value="" hidden>--Pick a Genre!--</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -116,7 +124,7 @@
             </button>
         </div>
         <div class="results">
-            
+
         </div>
     </div>
 
@@ -131,10 +139,10 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--Javascript link-->
     <!-- <script src="assets/javascript/app.js"></script> -->
+    <script src="assets/javascript/gabe.js"></script>
+
     <script src="assets/javascript/keyur.js"></script>
 
-    <script src="assets/javascript/gabe.js"></script>
-    <script src="assets/javascript/greg.js"></script>
 </body>
 
 </html>

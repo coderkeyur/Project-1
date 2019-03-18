@@ -29,17 +29,17 @@ console.log(weatherURL);
 
 // yelp api
 
-var yelpURL = "https://api.yelp.com/v3/businesses/search?location=706+Mission+St,+San+Francisco,+CA,+US&term=burrito&api_key=NySI3D4_gVwJy_xooOCbMQLl392e2KlZanz4-4ujdKt-FBmmtbef7aOtusg6MDpvO5foL4JtbLv9MmgGq6jYhJPSLmb4EUxQVHL6kyoULiR3PIE37lSGy-tkONCKXHYx"
-console.log(yelpURL);
+// var yelpURL = "https://api.yelp.com/v3/businesses/search?location=706+Mission+St,+San+Francisco,+CA,+US&term=burrito&api_key=NySI3D4_gVwJy_xooOCbMQLl392e2KlZanz4-4ujdKt-FBmmtbef7aOtusg6MDpvO5foL4JtbLv9MmgGq6jYhJPSLmb4EUxQVHL6kyoULiR3PIE37lSGy-tkONCKXHYx"
+// console.log(yelpURL);
 
-$.ajax({
-  url: yelpURL,
-  method: "GET",
-  dataType: "jsonp"
-}).then(function (yelpResponse) {
-  console.log(yelpResponse);
+// $.ajax({
+//   url: yelpURL,
+//   method: "GET",
+//   dataType: "jsonp"
+// }).then(function (yelpResponse) {
+//   console.log(yelpResponse);
 
-});
+// });
 
 // NPS api
 
@@ -55,3 +55,30 @@ $.ajax({
 
 });
 
+
+var genresComedy = ['Superbad', 'Big Lebowski', 'This is Spinal Tap', 'Zoolander', 'Caddyshack'];
+var genresDrama = ['Forrest Gump', 'A Beautiful Mind', 'Lady Bird', "What's Eating Gilbert Grape", 'Slumdog Millionaire'];
+var genresRomCom = ['When Harry Met Sally', '10 Things I Hate About You', 'The Wedding Singer', 'Forgetting Sarah Marshall', 'Reality Bites'];
+var genresSyFy = ['Donnie Darko', 'Dawn of the Planet of the Apes', 'Ex Machina', 'Edge of Tomorrow'];
+var movies = [genresSyFy, genresRomCom, genresDrama, genresComedy];
+
+var omdbURL = "https://www.omdbapi.com/?t=" + movies + "&y=&plot=short&apikey=a86b8a6d";
+
+
+$(document).ready()
+$.ajax({
+    url: omdbURL,
+    method: "get"
+  }).then(function(omdbResponse){
+    console.log(omdbResponse)
+    
+    for (var i=0; i<movies.length; i++) {
+      var x = movies[i];
+      var movieData = "<option value=" + x.movies + "</option>";
+      $(movieData).appendTo('#movieChoices');
+    }
+  });
+  console.log("should show list of movies: " + movieData); 
+
+
+  
