@@ -1,24 +1,63 @@
-#nameInput, #needARide, #locationInput {
-    max-width: 20%;
-}
-
-.masthead{
+.masthead {
     width: 100%;
     text-align: center;
     color: white;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-
 }
 
-.container {
+.ui.huge.header  {
     color: white;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 3em;
+    font-family: 'Abril Fatface', cursive;
+}
 
+.ui.header+p {
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.ui.form .field>label {
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.ui.sizer.vertical.segment {
+    text-align: center;
+}
+
+#submit-button-container {
+    text-align: center;
+}
+
+input , select {
+    max-width: 80%;
+}
+
+.main-content-area {
+    max-width: 95%;
+    height: 95%;
+    margin: auto;
+    margin-bottom: 5%;
+    background: url("../images/background_image_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
 }
 
 body, html {
     max-width: 100vw;
     max-height: 100vh;
-    margin: auto;
-    background-repeat: no-repeat;
+    background-color: gray;
+}
+
+.ui.ad:first-child {
+    width: 95%;
+    max-height: 18vh;
+    margin:auto;
+    font-family: 'Lobster', cursive;
+}
+
+.ui.header+p {
+    font-size: 1.25em;
 }
