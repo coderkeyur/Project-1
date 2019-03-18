@@ -24,6 +24,7 @@
 
 .ui.sizer.vertical.segment {
     text-align: center;
+    background-color: #d67418;
 }
 
 #submit-button-container {
@@ -39,8 +40,8 @@ input , select {
     height: 95%;
     margin: auto;
     margin-bottom: 5%;
-    background: url("../images/background_image_1.jpg");
-    background-size: cover;
+    background: url("../images/background_image_1.jpg") left no-repeat, url("../images/background_image_2.jpg") right no-repeat, url("../images/background_image_3.jpg") center no-repeat;
+    background-size: 34% 100%, 34% 100%, 33% 100%;
     background-repeat: no-repeat;
     border: 1px solid black;
 }
