@@ -27,7 +27,7 @@
     background-color: #d67418;
 }
 
-#submit-button-container {
+#submitBtn {
     text-align: center;
     padding-bottom: 10px;
 }
@@ -63,3 +63,6 @@ body, html {
     font-size: 1.25em;
 }
 
+#resultWindow {
+    background: white;
+}
