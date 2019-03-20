@@ -3,6 +3,8 @@ var name
 var zipCode
 var selectedGenre
 
+$("field").prop('required',true);
+
 $("#submitBtn").on("click", function () {
   state = $("#state").val();
   name = $("#userName").val();
