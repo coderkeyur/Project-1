@@ -18,9 +18,8 @@
 }
 
 .ui.form .field>label {
-    color: white;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     font-size: 1.15em;
+    padding-top: 10px;
 }
 
 .ui.sizer.vertical.segment {
@@ -30,6 +29,7 @@
 
 #submit-button-container {
     text-align: center;
+    padding-bottom: 10px;
 }
 
 input , select {
@@ -38,19 +38,18 @@ input , select {
 
 .main-content-area {
     max-width: 95%;
-    height: 75%;
     margin: auto;
     margin-bottom: 5%;
-    background: url("../images/background_image_1.jpg") left no-repeat, url("../images/background_image_2.jpg") right no-repeat, url("../images/background_image_3.jpg") center no-repeat;
-    background-size: 34% 100%, 34% 100%, 33% 100%;
-    background-repeat: no-repeat;
-    border: 1px solid black;
+    background: white;
 }
 
 body, html {
     max-width: 100vw;
     max-height: 100vh;
     background-color: gray;
+    background: url("../images/background_image_final.jpg");
+    background-repeat: repeat;
+    border: 1px solid black;
 }
 
 .ui.ad:first-child {
@@ -63,3 +62,4 @@ body, html {
 .ui.header+p {
     font-size: 1.25em;
 }
+
