@@ -28,8 +28,20 @@
 }
 
 #submitBtn {
+    min-width: 10%;
+    content: center;
+    object-position: center;
+}
+.ui.orange.button {
+    object-position: center;
     text-align: center;
     padding-bottom: 10px;
+    box-shadow: 20px, 20px, 20px rgba(0,0,0, 0.5);
+}
+.ui.orange.button:hover{
+	box-shadow: 30px 30px 30px rgba(0,0,0, 0.5);
+	transition: width 3s;
+	color: #ffffff;
 }
 
 input , select {
@@ -95,4 +107,11 @@ body, html {
 
 .col-lg-12.col-md-12.col-sm-12 {
     font-family: 'Lobster', cursive;
+}
+
+#thankyouContainer {
+    font-size: 3rem;
+    color: slategray;
+
+
 }
