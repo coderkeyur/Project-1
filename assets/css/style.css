@@ -115,3 +115,54 @@ body, html {
 
 
 }
+
+/* WEATHER STYLE */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 23px;
+  }
+  
+  .item1 {
+    border-radius: 25px;
+    grid-row: 1 / span 2;
+    background-image: url(../images/cat_weather.gif);
+    
+  }
+
+  div.item2 {
+      background-color: lightskyblue;
+      color: blue;
+  }
+
+  div.item3 {
+    background-color: lightskyblue;
+  }
+
+  div.item5 {
+      background-color: indianred;
+      color: darkred;
+  }
+
+  div.item6 {
+    background-color: indianred;
+  }
+
+  div.item4 {
+      border-radius: 25px;
+      background: url(../images/day.jpg)
+  }
+
+  div.item7 {
+    border-radius: 25px;
+    background-image: url(../images/moon.jpg);
+  }

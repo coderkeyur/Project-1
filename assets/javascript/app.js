@@ -51,20 +51,21 @@ function displayWeather() {
     var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
 
 
-    var pOne = $("<p>").html("<strong>City Name: </strong>" + cityName);
-    var pTwo = $("<p>").text("Temperature: " + mainTemp);
-    var pThree = $("<p>").text("Min Temperature: " + minTemp);
-    var pFour = $("<p>").text("Max Temperature: " + maxTemp);
-    var pSeven = $("<p>").text("Humidity: " + humidity);
+    var pOne = $("<p>").html( cityName);
+    var pTwo = $("<p>").text(mainTemp + "°F");
+    var pThree = $("<p>").text("Min Temp: " + minTemp + "°F");
+    var pFour = $("<p>").text("Max Temp: " + maxTemp + "°F");
+    var pSeven = $("<p>").text(humidity + "%");
     var pEight = $("<img>").attr("src", iconUrl);
     console.log(iconUrl);
 
-    $("#weatherContainer").append(pOne);
-    $("#weatherContainer").append(pTwo);
-    $("#weatherContainer").append(pThree)
-    $("#weatherContainer").append(pFour);
-    $("#weatherContainer").append(pSeven);
-    $("#weatherContainer").append(pEight);
+    $(".item1").append(pEight);
+    $(".item1").append(pOne);
+    $(".item1").append(pTwo);
+    $(".item2").append(pThree)
+    $(".item5").append(pFour);
+    $(".item6").append(pSeven);
+    
   });
 };
 
