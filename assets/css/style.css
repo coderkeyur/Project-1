@@ -10,6 +10,7 @@
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     font-size: 3em;
     font-family: 'Abril Fatface', cursive;
+    padding: 5px;
 }
 
 .ui.header+p {
@@ -26,11 +27,17 @@
     text-align: center;
     background-color: #d67418;
 }
+#searchWindow{
+    padding: 20px;
+}
 
 #submitBtn {
     min-width: 10%;
     content: center;
     object-position: center;
+    padding: 20px;
+    text-align: center;
+    padding-top: 0px;
 }
 .ui.orange.button {
     object-position: center;
@@ -57,10 +64,12 @@ input , select {
 }
 
 body, html {
-    max-width: 100vw;
-    max-height: 100vh;
+    /* max-width: 100vw;
+    max-height: 100vh; */
+    max-width: auto;
+    max-height: auto;
     background-color: gray;
-    background: url("../images/adult-adventure-backpack-287240.jpg");
+    background: url("../images/background-blur-clean-531880.jpg");
     background-repeat: repeat;
     border: 1px solid black;
 }
@@ -166,4 +175,8 @@ body, html {
   div.item7 {
     border-radius: 25px;
     background-image: url(../images/moon.jpg);
+  }
+  #resetBtn{
+      padding: 10px;
+      text-align: center;
   }
