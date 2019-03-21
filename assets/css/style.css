@@ -68,6 +68,10 @@ body, html {
     display: none;
 }
 
+#weatherContainer {
+    font-family: 'Abril Fatface', cursive;
+}
+
 #weatherContainer img:first-child {
     width: 75px;
     height: 75px;
@@ -76,8 +80,19 @@ body, html {
 }
 
 #npsContainer img {
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     padding: 10px;
-    float: left;
+}
+
+#npsContainer {
+    font-family: 'Abril Fatface', cursive;
+}
+
+#movieContainer {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.col-lg-12.col-md-12.col-sm-12 {
+    font-family: 'Lobster', cursive;
 }
