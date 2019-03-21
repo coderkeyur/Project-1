@@ -34,6 +34,7 @@
 }
 .ui.orange.button {
     object-position: center;
+    margin-left: 42%;
     text-align: center;
     padding-bottom: 10px;
     box-shadow: 20px, 20px, 20px rgba(0,0,0, 0.5);
