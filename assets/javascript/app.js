@@ -98,10 +98,9 @@ function displayNPS() {
       console.log(parkWeather);
 
       var pOne = $("<p>").html("<h4><strong>Park Name: </strong>" + fullName + ", " + state + "</h4>");
-      var pTwo = $("<p>").html("<h4><strong>Park Discription: </strong></h4>" + discription);
-      var pThree = $("<p>").html("<h4><strong>Weather Condition: </strong></h4>" + parkWeather);
+      var pTwo = $("<p>").html("<h4><strong>Park Discription: </strong>"+ "<br>" +"</h4>" + discription + "<br>");
+      var pThree = $("<p>").html("<h4><strong>Weather Condition: </strong>"+ "<br>" +"</h4>" + parkWeather +"<hr>");
       var pFour = $("<img>").attr("src", parkImages);
-      var space = $("<br>")
       var space = $("<br>")
       npsDiv.append(pOne);
       npsDiv.append(pFour);
