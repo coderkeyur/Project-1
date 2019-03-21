@@ -64,10 +64,8 @@ input , select {
 }
 
 body, html {
-    /* max-width: 100vw;
-    max-height: 100vh; */
-    max-width: auto;
-    max-height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
     background-color: gray;
     background: url("../images/background-blur-clean-531880.jpg");
     background-repeat: repeat;
@@ -176,7 +174,4 @@ body, html {
     border-radius: 25px;
     background-image: url(../images/moon.jpg);
   }
-  #resetBtn{
-      padding: 10px;
-      text-align: center;
-  }
+  
