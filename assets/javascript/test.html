@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sample Project</title>
+  <!--bootstrap CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <!--CSS style-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+          <h1>Let's plan your perfect day!</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container ">
+    <div class="row">
+      <div id="userinput">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="userName">Name</label>
+              <input type="text" class="form-control" id="userName" placeholder="Your Name">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="zipCode">Zip Code</label>
+                <input type="text" class="form-control" id="zipCode" placeholder="Zip Code">
+              </div>
+            <div class="form-group col-md-6">
+              <!-- <input type="text" class="form-control" id="state" placeholder="state code"> -->
+              <label for="state" class="col-sm-2 control-label">State</label>
+              <div class="col-sm-10">
+                <select class="form-control" id="state" name="state">
+                  <option value="">N/A</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="IA">Iowa</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MD">Maryland</option>
+                  <option value="ME">Maine</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MT">Montana</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NY">New York</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VA">Virginia</option>
+                  <option value="VT">Vermont</option>
+                  <option value="WA">Washington</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div id="resultWindow">
+        <div id="zipCodeWeather"></div>
+        <img src="assets/images/weather.png" alt="Weather"> 
+        <div id="nps"></div>
+      </div>
+    </div>
+  </div>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <!--Javascript link-->
+  <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/keyur.js"></script>
+</body>
+</html>
+
+
+<script>
+var state
+var name
+var zipCode
+
+function displayWeather() {
+  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&units=imperial&appid=6061eb64b523b35f60ac0a3b19c0ff2d"
+  console.log(weatherURL);
+
+  $.ajax({
+    url: weatherURL,
+    method: "GET"
+  }).then(function (response) {
+    
+    var cityName = response.name;
+    var mainTemp = response.main.temp;
+    var minTemp = response.main.temp_min;
+    var maxTemp = response.main.temp_max;
+    var sunrise = response.sys.sunrise;
+    var sunset = response.sys.sunset;
+    var humidity = response.main.humidity;
+    var weatherIcon = response.weather[0].icon;
+    
+    var pOne = $("<p>").text("City Name: " + cityName);
+    var pTwo = $("<p>").text("Temperature: " + mainTemp);
+    var pThree = $("<p>").text("Min Temperature: " + minTemp);
+    var pFour = $("<p>").text("Max Temperature: " + maxTemp);
+    var pFive = $("<p>").text("Sunrise Time: " + sunrise);
+    var pSix = $("<p>").text("Sunset Time: " + sunset);
+    var pSeven = $("<p>").text("Humidity: "+ humidity);
+    var pEight = $("<img>").attr("src", weatherIcon);
+
+    $("#zipCodeWeather").append(pOne);
+    $("#zipCodeWeather").append(pTwo);
+    $("#zipCodeWeather").append(pThree)
+    $("#zipCodeWeather").append(pFour);
+    $("#zipCodeWeather").append(pFive);
+    $("#zipCodeWeather").append(pSix);
+    $("#zipCodeWeather").append(pSeven);
+    $("#zipCodeWeather").append(pEight);
+  });
+}
+
+
+$("#submitBtn").on("click", function () {
+  state = $("#state").val();
+  name = $("#userName").val();
+  zipCode = $("#zipCode").val();
+
+  displayWeather();
+  displayNPS();
+  console.log(state);
+  console.log(name);
+  console.log(zipCode);
+});
+
+
+
+  function displayNPS() {
+    var npsURL = "https://developer.nps.gov/api/v1/parks?stateCode=" + state + "&limit=5&fields=images&api_key=hqLbjkfHa8HRopPGMlaD3XhcYiXqcOTV0hIpgjsT"
+
+    console.log(npsURL);
+
+    $.ajax({
+      url: npsURL,
+      method: "GET"
+    }).then(function (response) {
+      console.log(response);
+      var results = response.data
+
+      for (var i = 0; i < results.length; i++) {
+
+        var npsDiv = $("<div>");
+        var fullName = results[i].fullName;
+        var state = results[i].states;
+        var discription = results[i].description;
+        var parkWeather = results[i].weatherInfo;
+        console.log(results[i].images[0].url);
+        var parkImages = results[i].images[0].url;
+
+        console.log(fullName);
+        console.log(state);
+        console.log(discription);
+        console.log(parkWeather);
+
+        var pOne = $("<p>").text("Park Name: " + fullName + ", " + state);
+        var pTwo = $("<p>").text("Park Discription: " + discription);
+        var pThree = $("<p>").text("Weather Condition: " + parkWeather);
+        var pFour = $("<img>").attr("src", parkImages);
+
+        npsDiv.append(pOne);
+        npsDiv.append(pTwo);
+        npsDiv.append(pThree);
+        npsDiv.append(pFour);
+
+        $("#resultWindow").prepend(npsDiv);
+      }
+    });
+  }
+
+
+ 
+</script>
+
+</body> 
+
+</html>

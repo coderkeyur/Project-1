@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sample Project</title>
+  <!--bootstrap CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <!--CSS style-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="row"></div>
+  <div class="col-lg-12 col-md-12 col-sm-12 h1 text-center" id="titleName">
+    Let's Plan your perfect day!
+  </div>
+  </div>
+  <div class="container" id="container2">
+    <div class="row"></div>
+    <div class="col-lg-12 col-md-12 col-sm-12 h5 text-center" id="searchContainer">
+      <br>
+      <h3>Before we plan your day, tell us few things about you!</h3>
+      <br>
+      <form>
+        <div class="form-row text-center">
+          <div class="form-group col-md-3">
+            <label for="userName">Your name</label>
+            <input type="text" class="form-control" id="userName" placeholder="Your Name">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="movieGenre">Favorite movie genre</label>
+            <input type="text" class="form-control" id="movieGenre" placeholder="Comedy or Action">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="zipCode">Zipcode</label>
+            <input type="text" class="form-control" id="zipCode" placeholder="44809">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="state" class="col-sm-12 control-label">State</label>
+            <div class="col-sm-12">
+              <select class="form-control" id="state" name="state">
+                <option value="">Pick your state</option>
+                <option value="AK">Alaska</option>
+                <option value="AL">Alabama</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">District of Columbia</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="IA">Iowa</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MS">Mississippi</option>
+                <option value="MT">Montana</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg" id="submitBtn">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="container" id="resultWindow">
+    <div class="container" id="container3">
+      <div class="col-lg-12 col-md-12 col-sm-12 h3 text-center" id="resultName">
+        Well! based on your inputs, we think you would like to spend your day doing following activities!
+      </div>
+    </div>
+    <br>
+    <h4>First! lets check out today's weather forecast!</h4>
+    <div class="container" id="weatherContainer">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+          <img src="assets/images/weather.png" style="width:100px;height:100px;">
+      </div>
+    </div>
+    <br>
+    <h4>Now, If you are in mood for short or long drive, here are some of the best national parks in your state. Enjoy
+      some outdoors! </h4>
+    <div class="container" id="npsContainer">
+      
+    </div>
+    <br>
+    <h4>Lastly, grab a glass of wine or bottle and enjoy this movie!</h4>
+    <div class="container" id="movieContainer">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+      </div>
+    </div>
+    <br>
+    <div class="container text-center" id="thankyouContainer">
+      <div class="col-lg-12 col-md-12 col-sm-12 h3">
+        Hope you liked our suggestions and have a wonderful day!!
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row text-center h1">
+      <div class="col-lg-12 col-md-12 col-sm-12" id="title">
+          <h1>Let's plan your perfect day!</h1>
+      </div>
+    </div>
+  <div class="row">
+      <div class="container text-center">
+          <div class="row">
+            <div class="text-center" id="userinput">
+              <form>
+                <div class="form-row text-center">
+                  <div class="form-group col-md-4">
+                    <label for="userName">Name</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Your Name">
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="zipCode">Zip Code</label>
+                      <input type="text" class="form-control" id="zipCode" placeholder="Zip Code">
+                    </div>
+                  <div class="form-group col-md-4">
+                    <label for="state" class="col-sm-12 control-label">State</label>
+                    <div class="col-sm-12">
+                      <select class="form-control" id="state" name="state">
+                        <option value="">N/A</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DC">District of Columbia</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="IA">Iowa</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MD">Maryland</option>
+                        <option value="ME">Maine</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MT">Montana</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NY">New York</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="PR">Puerto Rico</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VA">Virginia</option>
+                        <option value="VT">Vermont</option>
+                        <option value="WA">Washington</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+  </div>
+ 
+  <div class="container">
+    <div class="row">
+      <div class="lg-lg-12 col-md-12 col-sm-12">
+          <div id="resultWindow">
+              <div id="zipCodeWeather"></div>
+              <div id="nps"></div>
+            </div>
+      </div>
+    </div>
+  </div> -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!--Javascript link-->
+  <script src="app.js"></script>
+  <!-- <script src="assets/javascript/keyur.js"></script> -->
+</body>
+</html>
