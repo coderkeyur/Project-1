@@ -47,7 +47,7 @@
     box-shadow: 20px, 20px, 20px rgba(0,0,0, 0.5);
 }
 .ui.orange.button:hover{
-	box-shadow: 30px 30px 30px rgba(0,0,0, 0.5);
+    box-shadow: 30px 30px 30px rgba(0,0,0, 0.5);
 	transition: width 3s;
 	color: #ffffff;
 }
