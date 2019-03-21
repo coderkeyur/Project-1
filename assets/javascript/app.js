@@ -33,8 +33,6 @@ $("#submitBtn").on("click", function () {
       var mainTemp = response.main.temp;
       var minTemp = response.main.temp_min;
       var maxTemp = response.main.temp_max;
-      var sunrise = response.sys.sunrise;
-      var sunset = response.sys.sunset;
       var humidity = response.main.humidity;
       var iconCode = response.weather[0].icon;
       var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
@@ -44,8 +42,6 @@ $("#submitBtn").on("click", function () {
       var pTwo = $("<p>").text("Temperature: " + mainTemp);
       var pThree = $("<p>").text("Min Temperature: " + minTemp);
       var pFour = $("<p>").text("Max Temperature: " + maxTemp);
-      var pFive = $("<p>").text("Sunrise Time: " + sunrise);
-      var pSix = $("<p>").text("Sunset Time: " + sunset);
       var pSeven = $("<p>").text("Humidity: " + humidity);
       var pEight = $("<img>").attr("src", iconUrl);
       console.log(iconUrl);
@@ -54,8 +50,6 @@ $("#submitBtn").on("click", function () {
       $("#weatherContainer").append(pTwo);
       $("#weatherContainer").append(pThree)
       $("#weatherContainer").append(pFour);
-      $("#weatherContainer").append(pFive);
-      $("#weatherContainer").append(pSix);
       $("#weatherContainer").append(pSeven);
       $("#weatherContainer").append(pEight);
     });
