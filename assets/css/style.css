@@ -65,4 +65,5 @@ body, html {
 
 #resultWindow {
     background: white;
+    display: none;
 }

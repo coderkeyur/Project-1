@@ -2,6 +2,12 @@ var state
 var name
 var zipCode
 var selectedGenre
+var hiddenWindow = document.getElementById("resultWindow");
+
+var showHidden = function() {
+  $("#resultWindow").css('display' , "block");
+  console.log("show me!");
+};
 
 $("field").prop('required',true);
 
@@ -10,6 +16,8 @@ $("#submitBtn").on("click", function () {
   name = $("#userName").val();
   zipCode = $("#zipCode").val();
   selectedGenre = $("#movieGenre").val();
+
+  showHidden();
 
   displayNPS();
   displayWeather();
